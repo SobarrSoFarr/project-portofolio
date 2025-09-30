@@ -1,0 +1,72 @@
+/* Reset sederhana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFFE0;
+    color: #191970;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #333399;
+}
+
+/* Profil Section */
+.profil {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+}
+
+.foto-profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #191970;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #333399;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555;
+}
