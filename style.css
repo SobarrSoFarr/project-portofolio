@@ -15,12 +15,6 @@ body {
     align-items: center;
     overflow-x: hidden;
     scroll-behavior: smooth;
-
-/* Ganti background gradient dengan foto kamu */
-    background-image: url('background.jpeg');
-    background-size: cover;        /* supaya foto menutupi seluruh layar */
-    background-position: center;   /* posisi foto di tengah */
-    background-repeat: no-repeat;  /* jangan diulang */
 }
 
 /* Header */
