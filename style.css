@@ -1,4 +1,4 @@
-/* Reset sederhana */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,11 +8,13 @@
 /* Body */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #FFFFE0;
+    background: linear-gradient(135deg, #fefcea, #f1da36);
     color: #191970;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -22,7 +24,8 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: 2px;
 }
 
 header p {
@@ -33,12 +36,16 @@ header p {
 /* Profil Section */
 .profil {
     text-align: center;
-    padding: 20px;
-    background-color: #f0f8ff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 30px;
+    background: rgba(240, 248, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     width: 90%;
     max-width: 500px;
+    margin: 40px 0;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease-out;
 }
 
 .foto-profil {
@@ -47,26 +54,75 @@ header p {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+    transition: transform 0.5s;
+}
+
+.foto-profil:hover {
+    transform: scale(1.2) rotate(10deg);
 }
 
 button {
     background-color: #191970;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background 0.3s;
+    transition: transform 0.3s, background 0.3s;
 }
 
 button:hover {
     background-color: #333399;
+    transform: scale(1.1);
+}
+
+/* Portofolio */
+.portofolio {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portofolio h2 {
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #191970;
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    transition: transform 0.5s, box-shadow 0.5s;
+    cursor: pointer;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
 /* Footer */
 footer {
-    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 0.9rem;
     color: #555;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+/* Scroll Reveal Effect */
+.scroll-reveal.show {
+    transform: translateY(0);
+    opacity: 1;
 }
