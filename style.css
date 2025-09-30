@@ -1,0 +1,107 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Variabel Warna (Opsional, tapi direkomendasikan) */
+:root {
+    --bg-color: #0d0d0d; /* Warna latar belakang gelap */
+    --main-color: #00ff62; /* Warna aksen hijau terang */
+    --text-color: #fff;
+}
+
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg-color); /* Latar belakang default */
+    color: var(--text-color);
+}
+
+/* Penataan Link Umum */
+a {
+    color: var(--text-color);
+    transition: .5s;
+}
+
+/* --- Penataan Navbar Dasar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    /* Tambahkan 'visibility: hidden;' dan 'opacity: 0;' untuk Animasi Pop-up */
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.nav-list a {
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.nav-list a:hover,
+.nav-list a.active {
+    color: var(--main-color);
+}
+
+
+/* --- Penataan Home Section Dasar --- */
+.home {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 60px 9% 0;
+    gap: 50px; /* Jarak antara teks dan gambar */
+    /* Tambahkan 'visibility: hidden;' dan 'opacity: 0;' untuk Animasi Pop-up */
+}
+
+.home-info h1 {
+    font-size: 55px;
+}
+
+.home-info h2 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.home-info h2 span {
+    /* Properti dasar untuk teks animasi scanning */
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-color);
+}
+
+.home-info p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+/* --- Area untuk Animasi CSS lainnya (Border, Bar, Keyframes) --- */
+
+/* KEYFRAMES akan diletakkan di bagian akhir file CSS ini */
+/* Contoh: */
+/*
+@keyframes rotateBorder {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+*/
